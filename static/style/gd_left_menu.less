@@ -1,0 +1,85 @@
+@import "./gd_common.less";
+//侧边栏
+.gd-left-menu {
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    overflow-x: hidden;
+    white-space: nowrap;
+    width: 56px;
+    background: @leftMenuBgColor;
+    user-select: none;
+    transition: all .2s, width 0s;
+    z-index: 1000;
+    * {
+        transition: all .2s, width 0s;
+    }
+    &[style*="width: 56px"] {
+        overflow: hidden !important;
+    }
+    .gd-left-menu-logo {
+        background-image: url(../../src/assets/logo.png);
+        background-repeat: no-repeat;
+        background-position: 10px;
+        width: 170px;
+        height: 80px;
+    }
+    .gd-left-menu-body {
+        position: relative;
+        height: calc(~"100% - 80px");
+    }
+    .gd-left-menu-content {
+        width: 170px;
+        box-sizing: border-box;
+        padding-left: 18px;
+        position: relative;
+        left: 0;
+    }
+    .gd-left-menu-text {
+        color: @leftMenuTextColor;
+        cursor: pointer;
+        display: block;
+        height: 100%;
+        &:hover {
+            color: darken(@primaryColor, 10%);
+            background-color: darken(@leftMenuBgColor, 10%);
+            padding-left: 28px !important;
+        }
+    }
+    .gd-active {
+        color: @primaryColor;
+    }
+    .gd-left-menu-sub {
+        position: absolute;
+        top: 0;
+        left: 100%;
+        background: #171D29;
+        display: none;
+        li {
+            position: relative;
+            text-align: center;
+            min-width: 140px;
+        }
+        .gd-left-menu-text {
+            position: relative;
+            left: 0;
+            padding: 0 15px;
+        }
+    }
+    .gd-left-menu-item {
+        line-height: 55px;
+        font-size: 16px;
+        position: relative;
+        .gd-left-menu-icon {
+            margin-right: 20px;
+            font-size: 20px;
+            float: left;
+        }
+    }
+    .gd-left-menu-next {
+        position: absolute;
+        right: 0;
+        font-size: 20px;
+    }
+}

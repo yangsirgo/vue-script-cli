@@ -1,6 +1,6 @@
 <template>
   <div style="position:relative;">
-    hello world!!!
+
     <ToolTip
       type="type"
       placement="top">
@@ -13,10 +13,12 @@
 <script>
   import ToolTip from './tooltip.vue';
 
+
   export default {
     data:function(){
       return{
-        type:'disable'
+        type:'disable',
+
       }
     },
     components: {

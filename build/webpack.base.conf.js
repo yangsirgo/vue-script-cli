@@ -13,8 +13,8 @@ function resolve (dir) {
 module.exports = {
   context: path.resolve(__dirname, '../'),
   entry: {
-    //app: './src/main.js'
-    gdComponents: './src/lib/index.js'
+    //app: './src/main.js'  //在开发模式 dev 时使用
+    gdComponents: './src/lib/index.js'  //打包build script时使用
   },
   output: {
     path: config.build.assetsRoot,

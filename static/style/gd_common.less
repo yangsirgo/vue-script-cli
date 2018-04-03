@@ -1,0 +1,83 @@
+@import "./gd_variables.less";
+body {
+    font-size: 14px;
+    font-family: "Arial", "Microsoft YaHei", "Segoe UI", Helvetica, 'FreeSans', 'Arimo', "sans-serif";
+    color: @mainTextColor;
+}
+
+[class*="icon-"] {
+    font-family: "iconfont" !important;
+    font-size: 16px;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style: none;
+}
+
+button {
+    cursor: pointer;
+}
+
+[v-cloak] {
+    display: none !important;
+}
+
+//主色调
+.gd-color-primary {
+    color: @primaryColor;
+}
+
+//次色调
+.gd-color-secondary {
+    color: @secondaryColor;
+}
+
+//主要文字颜色
+.gd-color-maintext {
+    color: @mainTextColor;
+}
+
+//次要文字颜色
+.gd-color-subtext {
+    color: @subTextColor;
+}
+
+//右侧内容区
+.right-content {
+    margin-left: 56px;
+}
+
+
+/*chrome下滚动条样式*/
+
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    border-radius: 6px;
+    background-color: #fff;
+}
+
+::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+    background-color: #fff;
+}
+
+::-webkit-scrollbar-thumb {
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);
+    border-radius: 6px;
+    background-color: #e1e1e1;
+}
+
+// 去除ie浏览器默认input框删除按钮和眼睛
+::-ms-clear,
+::-ms-reveal {
+    display: none;
+}
